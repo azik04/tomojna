@@ -35,28 +35,31 @@
             </div>
         </div>
         <div class="header-options">
-            <a href="" class="header-options-select">
-                <img src="/img/Icon.svg" alt="">
+            <a href="#" class="header-options-select active" onclick="toggleActive(event, this)">
+                <img src="/img/Icon.svg" class="delete-icon" alt="">
             </a>
-            <a href="" class="header-options-select">
-                <img src="/img/Select.svg" alt="">
+            <a href="#" class="header-options-select" onclick="toggleActive(event, this)">
+                <img src="/img/ADD.svg" class="delete-icon" alt="">
             </a>
-            <a href="" class="header-options-select">
-                <img src="/img/Settings.svg" alt="">
+            <a href="#" class="header-options-select" onclick="toggleActive(event, this)">
+                <img src="/img/Settings.svg" class="delete-icon" alt="">
             </a>
         </div>
     </header>
     <main>
         <div class="main">
             <div class="main-tabs">
-                <a href="" class="main-tabs-select">
-                    <p>#12345678</p><i class="fa-solid fa-xmark"></i>
+                <a href="#" class="main-tabs-select" onclick="toggleActive(event, this)">
+                    <p>#12345678</p>
+                    <i class="fa-solid fa-xmark"></i>
                 </a>
-                <a href="" class="main-tabs-select">
-                    <p>#12345678</p><i class="fa-solid fa-xmark"></i>
+                <a href="#" class="main-tabs-select" onclick="toggleActive(event, this)">
+                    <p>#12345678</p>
+                    <i class="fa-solid fa-xmark"></i>
                 </a>
-                <a href="" class="main-tabs-select">
-                    <p>#12345678</p><i class="fa-solid fa-xmark"></i>
+                <a href="#" class="main-tabs-select" onclick="toggleActive(event, this)">
+                    <p>#12345678</p>
+                    <i class="fa-solid fa-xmark"></i>
                 </a>
             </div>
             <div class="main-info">
@@ -66,8 +69,8 @@
                     </div>
                     <div class="main-info-begin-options">
                         <a href="#" class="main-info-begin-options-transport">TRANSPORTATION</a>
-                        <a href="#" class="main-info-begin-options-btns"><img src="/img/Delate.svg" alt=""></a>
-                        <a href="#" class="main-info-begin-options-btns"><img src="/img/Edit.svg" alt=""></a>
+                        <a href="#" class="main-info-begin-options-btns"><img src="/img/Delate.svg" alt="Delete" class="delete-icon"></a>
+                        <a href="#" class="main-info-begin-options-btns"><img src="/img/Edit.svg" alt="Edit" class="delete-icon"></a>
                     </div>
                 </div>
                 <div class="main-info-text">
@@ -102,8 +105,99 @@
                         <p class="text">At risus viverra adipiscing at in tellus. Blandit massa enim nec dui nunc mattis. Lacus vel facilisis volutpat est velit. At risus viverra adipiscing at in tellus. Blandit massa enim nec dui nunc mattis. Lacus vel facilisis volutpat.</p>
                     </div>
                 </div>
+                <div class="main-info-blocks">
+                    <div class="main-info-block">
+                        <div class="main-info-block-header">
+                            <div class="main-info-block-header-left">
+                                <p>Item List</p>
+                                <a href="#">Label text or value</a>
+                            </div>
+                            <div class="main-info-block-header-right">
+                                <a href="#"><i class="fa-solid fa-plus"></i> Add new Item</a>
+                            </div>
+                        </div>
+                        <div class="main-info-block-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="bold">Item Name</th>
+                                        <th>Netto/Gross Wh.</th>
+                                        <th>Quantity</th>
+                                        <th class="action-column"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="bold">Test First Item</td>
+                                        <td>100/120kg</td>
+                                        <td>3042</td>
+                                        <td class="action-column"><a href=""><img src="/img/remove.svg" alt="Remove"></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="main-info-block-footer">
+                            <p>1/5</p>
+                        </div>
+                    </div>
+                    <div class="main-info-block">
+                        <div class="main-info-block-header">
+                            <div class="main-info-block-header-left">
+                                <p>Shipping Rate</p>
+                            </div>
+                            <div class="main-info-block-header-right">
+                                <a href="#"><i class="fa-solid fa-plus"></i> Add new List</a>
+                            </div>
+                        </div>
+                        <div class="main-info-block-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="bold">Item Name</th>
+                                        <th>Price</th>
+                                        <th class="action-column"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="bold">Test First List</td>
+                                        <td>1500usd</td>
+                                        <td class="action-column"><a href=""><img src="/img/remove.svg" alt="Remove"></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="main-info-block-footer">
+                            <p>1/5</p>
+                        </div>
+                    </div>
+                    <div class="main-info-block">
+                        <div class="main-info-block-header">
+                            <div class="main-info-block-header-left">
+                                <p>Files</p>
+                            </div>
+                            <div class="main-info-block-header-right">
+                                <a href="#"><i class="fa-solid fa-plus"></i> Add</a>
+                            </div>
+                        </div>
+                        <div class="main-info-block-table">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="bold">Test First Item</td>
+                                        <td class="action-column"><a href=""><img src="/img/remove.svg" alt="Remove"></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="main-info-block-footer">
+                            <p>1/5</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+    <script src="/script.js"></script>
 </body>
 </html>
